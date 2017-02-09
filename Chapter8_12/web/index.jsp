@@ -26,6 +26,15 @@
 	Just give it the name, and the value come back from the Map of Cookie names/values -->
 	<h1>Using EL implicit object cookie:</h1>
 	${cookie.userName.value}
-	
+	<hr>
+	<!--  get context-param from DD using scripting -->
+	<h2>Get context-param using scripting:</h2>
+	email is: <%= application.getInitParameter("mainEmail")  %>
+	<!-- Same thing get context param but this time using EL , no scripting -->
+	<hr>
+	<h2>Get context-param NO scripting just EL:</h2>
+	<!--  servlet init-params are configured using init-param, but the EL implicit "initParam
+	is for CONTEXT params!!! -->
+	email is: ${initParam.mainEmail}
 </body>
 </html>
