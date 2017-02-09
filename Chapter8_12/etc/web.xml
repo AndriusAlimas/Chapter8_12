@@ -13,4 +13,9 @@
   	</jsp-property-group>
   </jsp-config>
   
+  <context-param>
+  	<param-name>mainEmail</param-name>
+  	<param-value>andriusjavait@gmail.com</param-value>
+  </context-param>
+  
 </web-app>
