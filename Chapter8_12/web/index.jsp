@@ -43,6 +43,7 @@
 	email is: ${initParam.mainEmail}
 	<hr>
 	<h1>Rolling a dice... </h1><br>
-	${mine:rollIt()} <!-- ${prefix:name} name you define in tld file in <function><name> elements -->
+	<%--  ${prefix:name} name you define in tld file in <function><name> elements --%>
+	${mine:rollIt()} 
 </body>
 </html>

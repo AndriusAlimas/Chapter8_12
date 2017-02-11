@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
-  <taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
-      http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_0.xsd"
-	version="2.0">
+    <taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+      http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_0.xsd" 
+      version="2.0"> 
 
-	<tlib-version>1.2</tlib-version>
-	<uri>DiceFunctions</uri><!--tells the Container the name of the TLD we use 
-		this in taglib directive uri !! -->
-	<function>
-		<name>rollIt</name><!--you give function name for EL (method name change 
-			yours) -->
-		<function-class>example.foo.DiceRoller</function-class>
-		<function-signature><!-- to find correct signature if exist more than one 
-				method -->
-			int rollDice()<!-- it has to be real method signature -->
-		</function-signature>
-	</function>
-  </taglib>
+	 <tlib-version>1.2</tlib-version>
+	 <uri>DiceFunctions</uri><!--tells the Container the name of the TLD -->
+		<function>
+				<name>rollIt</name><!--you give function name for EL (method name change yours) -->
+				<function-class>example.foo.DiceRoller</function-class>
+				<function-signature><!-- to find correct signature if exist more than one method -->
+						int rollDice()
+				</function-signature>
+		</function>
+</taglib> 
