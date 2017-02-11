@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- scripting taglib directive tells the Container i am going to use this TLD
+	and in this JSP when i want to use function from this TLD, i am going prefix with this name 
+	The uri tells thye Container the name of the TLD (which does NOT have to be same of the FILE!!)
+	, which the Container needs so it knows which method to call to call when JSP invokes the EL function-->
+<%@ taglib prefix="mine" uri="DiceFunctions"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -36,5 +41,8 @@
 	<!--  servlet init-params are configured using init-param, but the EL implicit "initParam
 	is for CONTEXT params!!! -->
 	email is: ${initParam.mainEmail}
+	<hr>
+	<h1>Rolling a dice... </h1><br>
+	${mine:rollIt()} <!-- ${prefix:name} name you define in tld file in <function><name> elements -->
 </body>
 </html>
